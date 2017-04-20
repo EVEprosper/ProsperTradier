@@ -43,7 +43,7 @@ class PyTest(TestCommand):
         self.pytest_args = [
             'tests',
             '-rx',
-            '--cov=prosper/' + __project_name__,
+            '--cov=' + __package_name__,
             '--cov-report=term-missing'
         ]    #load defaults here
 
