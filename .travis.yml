@@ -1,0 +1,19 @@
+language: python
+python:
+  - "3.5"
+  - "3.6"
+install: 
+  - "pip install ."
+script: 
+  - "python setup.py test"
+#deploy:
+#  provider: pypi
+#  user: lockefox
+#  password:
+#    secure: GlRL/fF6I62b4B9KM8DjwY3QXNtp9+4hI0etLw4F/fk0aFiFvjs7a4nN0fncR9X2rIA/vbcYfHJy6Kho2EEHISFM/EAeUoOy3OKraX78+jwM0DXzgsEiy9krANVL2t+EbamWaviRaJgXHYRePRTNXesL5Mv4Owdf28gDrw1yneVj6YKpbpQ7A9U3dABW3mo/Gv2R0p3mfVBPgMTr9cLGr+fIJJKNIjeGeVsjP46a4Jq5T0MrFgm833XlDS+I1nHuMhl7VC/sE90o+w/6wy5Fp417PNn9+IOR42cBUAcmFNkkoEc157Bw/gKH4XTwB8Z+5aKO9LLO11FKVDrZaKe5tIKBONsbN0na6WpBGOn3ihhmwLuBxrcRM538EMY58psg732QoJAcXIpDAhVcvvUVSeU5HyrLrFvXFJHTSpMJ6f+QaLK80zNujqJ5suRjQT889DyUe7PvKQI51cxigu096+o0H6za59FwjcEG7vctyV+4K6O85lL71U9nsPYuQ/n6+Jv/d3NfAzh0aFCbbpKSFHPRY3Mhbipkf8Z7wcbAYoqm3VjGrlI/e66lQLA0NBAtNuoBXCTavUa5/SlgYcUZLm7ItihQYpYAE/Qo4DzYY3nHWVf/45Xe7QKSGVzyC/eD63alH9Nqh2o8DQNe3VbV1Ap6tMlisHxAp7Ml+0ORv54=
+#  on:
+#    tags: true
+#    distributions: "sdist bdist_wheel"
+after_success:
+  - "pip install python-coveralls"
+  - "coveralls"
