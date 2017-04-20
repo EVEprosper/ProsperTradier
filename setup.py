@@ -90,9 +90,11 @@ setup(
     author='John Purcell',
     author_email='jpurcell.ee@gmail.com',
     url='https://github.com/EVEprosper/ProsperTradier',
+    download_url='https://github.com/EVEprosper/ProsperTradier/tarball/v' + __version__,
     license='MIT',
     classifiers=[
-        'Programming Language :: Python :: 3.5'
+        'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 3.6'
     ],
     keywords='TODO',
     packages=find_packages(),
