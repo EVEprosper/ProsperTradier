@@ -1,3 +1,5 @@
+|Tradier Logo| |Show Logo| 
+
 ProsperTradier
 ==============
 
@@ -26,3 +28,7 @@ Notes
 .. |PyPI Badge| image:: https://badge.fury.io/py/ProsperTradier.svg
     :target: https://badge.fury.io/py/ProsperTradier
 .. _Tradier's Developer REST API: https://developer.tradier.com/documentation
+.. |Show Logo| image:: http://dl.eveprosper.com/podcast/logo-colour-17_sm.png
+    :target: http://www.eveprosper.com/
+.. |Tradier Logo| image:: http://dl.eveprosper.com/podcast/tradier-developer-logo_sm.png
+    :target: https://developer.tradier.com
