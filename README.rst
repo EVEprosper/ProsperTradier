@@ -1,6 +1,6 @@
-|Tradier Logo| 
-
 |Show Logo| 
+
+|Tradier Logo| 
 
 ProsperTradier
 ==============
