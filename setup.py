@@ -1,6 +1,7 @@
 """wheel setup for ProsperTradier utilities"""
 
 from os import path, listdir
+import importlib
 from setuptools import setup, find_packages
 from setuptools.command.test import test as TestCommand
 from codecs import open
@@ -100,7 +101,8 @@ setup(
         '': ['LICENSE', 'README.rst']
     },
     install_requires=[
-        'requests>=2.12.0'
+        'requests>=2.12.0',
+        'semantic_version~=2.6.0'
     ],
     tests_require=[
         'pytest>=3.0.0',
