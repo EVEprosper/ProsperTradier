@@ -7,7 +7,6 @@ HERE = path.abspath(path.dirname(__file__))
 ROOT = path.abspath(path.dirname(HERE))
 
 TEST_CONFIG_FILE = path.join(HERE, 'test.cfg')
-CONFIG = parse_test_config(TEST_CONFIG_FILE)
 def parse_test_config(config_filepath=TEST_CONFIG_FILE):
     """loads test.cfg for use in tests
 
@@ -27,6 +26,8 @@ def parse_test_config(config_filepath=TEST_CONFIG_FILE):
         config_parser.read_file(cfg_fh)
 
     return config_parser
+
+CONFIG = parse_test_config(TEST_CONFIG_FILE)
 
 def get_config(
         section_name,
@@ -85,3 +86,25 @@ def get_value_from_env(
     value = getenv(var_name)
 
     return value
+
+def debug_logger():
+    """build debug logger"""
+    logger = logging.getLogger('tradier_test')
+    log_format = '[%(levelname)s:%(filename)s--%(funcName)s:%(lineno)s] %(message)s'
+    log_level = 'DEBUG'
+    log_name = 'tradier_test.log'
+
+    logger.setLevel(log_level)
+    formatter = logging.Formatter(log_format)
+
+    ## Log to File ##
+    log_fh = logging.FileHandler(path.join(HERE, log_name))
+    log_fh.setFormatter(formatter)
+    logger.addHandler(log_fh)
+
+    ## Log to stdout ##
+    log_stdout = logging.StreamHandler()
+    log_stdout.setFormatter(formatter)
+    logger.addHandler(log_stdout)
+
+    return logger

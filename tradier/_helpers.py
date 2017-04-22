@@ -56,4 +56,6 @@ def generic_get_call(
     req.raise_for_status()
     data = req.json()
 
+    LOGGER.debug(data)
+
     return data
