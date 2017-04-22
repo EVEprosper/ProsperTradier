@@ -1,5 +1,5 @@
 """utilities.py: helper functions for testing"""
-from os import path
+from os import path, getenv
 import configparser
 import logging
 

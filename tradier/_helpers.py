@@ -40,7 +40,7 @@ def generic_get_call(
     Returns:
         (:obj:`dict`) response from GET HTTP endpoint
     """
-    sent_headers = GENERIC_HEADER
+    sent_headers = dict(GENERIC_HEADER) #save copy
     sent_headers.update(headers)
     sent_headers.update(auth_header)
 
