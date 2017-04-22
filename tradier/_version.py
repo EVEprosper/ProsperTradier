@@ -5,7 +5,7 @@ try:    #pragma: no cover
 except ImportError:
     INSTALLED = False
 
-__version__ = '0.9.0'
+__version__ = '0.1.0'
 __template_version__ = None
 
 def semantic_to_numeric(version_string):
